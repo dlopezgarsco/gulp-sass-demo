@@ -26,7 +26,8 @@ a {
   text-decoration: none; }
 
 body {
-  font-family: 'Roboto', 'Arial'; }
+  font-family: 'Roboto', 'Arial';
+  background: #eee; }
 
 img {
   width: auto;
@@ -43,58 +44,98 @@ img {
   width: 100%;
   min-height: 1px; }
 
-@media only screen and (min-width: 30em) {
+@media only screen and (min-width: 600px) {
   .wrapper {
     width: 95%;
     max-width: 65em; }
   .column-1 {
     width: 8.33333%; }
+  .off-column-1 {
+    margin-left: 8.33333%; }
   .column-2 {
     width: 16.66667%; }
+  .off-column-2 {
+    margin-left: 16.66667%; }
   .column-3 {
     width: 25%; }
+  .off-column-3 {
+    margin-left: 25%; }
   .column-4 {
     width: 33.33333%; }
+  .off-column-4 {
+    margin-left: 33.33333%; }
   .column-5 {
     width: 41.66667%; }
+  .off-column-5 {
+    margin-left: 41.66667%; }
   .column-6 {
     width: 50%; }
+  .off-column-6 {
+    margin-left: 50%; }
   .column-7 {
     width: 58.33333%; }
+  .off-column-7 {
+    margin-left: 58.33333%; }
   .column-8 {
     width: 66.66667%; }
+  .off-column-8 {
+    margin-left: 66.66667%; }
   .column-9 {
     width: 75%; }
+  .off-column-9 {
+    margin-left: 75%; }
   .column-10 {
     width: 83.33333%; }
+  .off-column-10 {
+    margin-left: 83.33333%; }
   .column-11 {
     width: 91.66667%; }
+  .off-column-11 {
+    margin-left: 91.66667%; }
   .column-12 {
-    width: 100%; } }
+    width: 100%; }
+  .off-column-12 {
+    margin-left: 100%; } }
 
 .navbar {
-  background: saddlebrown;
-  border-bottom: 2px solid #eee; }
+  background: #2e2e2e;
+  border-bottom: 2px solid #eeefef;
+  display: block; }
 
-.nav-item {
+.navbar > ul > li {
   float: left;
   list-style: none;
-  color: #eee;
-  display: block;
-  position: relative; }
+  color: #eee; }
+  .navbar > ul > li a {
+    color: #eee;
+    padding: 1em; }
+  .navbar > ul > li a:hover,
+  .navbar > ul > li a:active {
+    background: #eee;
+    color: saddlebrown !important; }
 
-.nav-item > a {
-  color: #eee;
-  padding: 1em; }
+.main-content img {
+  position: inherit;
+  z-index: 0; }
 
-.nav-item > a:hover, .nav-item > a:active {
-  background: #eee;
-  color: saddlebrown; }
+.main-content h1 {
+  position: absolute;
+  z-index: 1;
+  text-align: center; }
 
-.sidebar {
-  background: gold;
-  height: 600px; }
+.main-content h1:hover {
+  color: #fff; }
 
-.main {
-  background: indianred;
-  height: 600px; }
+.footer {
+  border-top: 2px solid indianred;
+  background-color: gray;
+  border-top: 3px solid #2e2e2e;
+  height: 60px; }
+  .footer span {
+    font-size: 14px;
+    float: left;
+    margin: 1em;
+    color: #2e2e2e; }
+
+#poio-test {
+  background: pink; }

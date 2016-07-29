@@ -22,6 +22,12 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+a {
+  text-decoration: none; }
+
+body {
+  font-family: 'Roboto', 'Arial'; }
+
 img {
   width: auto;
   max-width: 100%;
@@ -47,7 +53,7 @@ img {
     width: 16.66667%; }
   .column-3 {
     width: 25%; }
-  .column-4, span:hover {
+  .column-4 {
     width: 33.33333%; }
   .column-5 {
     width: 41.66667%; }
@@ -64,14 +70,31 @@ img {
   .column-11 {
     width: 91.66667%; }
   .column-12 {
-    width: 100%; }
-  span {
-    background: gold;
-    display: block;
-    padding: 1em 0;
-    text-align: center; }
-  button {
-    background: indianred;
-    font-size: 16px;
-    padding: 10px 30px 10px 30px;
-    display: block; } }
+    width: 100%; } }
+
+.navbar {
+  background: saddlebrown;
+  border-bottom: 2px solid #eee; }
+
+.nav-item {
+  float: left;
+  list-style: none;
+  color: #eee;
+  display: block;
+  position: relative; }
+
+.nav-item > a {
+  color: #eee;
+  padding: 1em; }
+
+.nav-item > a:hover, .nav-item > a:active {
+  background: #eee;
+  color: saddlebrown; }
+
+.sidebar {
+  background: gold;
+  height: 600px; }
+
+.main {
+  background: indianred;
+  height: 600px; }

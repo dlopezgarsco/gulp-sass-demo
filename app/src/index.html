@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>gulp-sass-demo</title>
   <!--build:css css/styles.min.css-->
+  <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css">
   <link rel="stylesheet" href="global/style.css">
   <!--endbuild-->
 </head>
@@ -11,30 +12,23 @@
 
 <section class="wrapper">
   <div class="row">
-    <div class="column-3"><span>3</span></div>
-    <div class="column-3"><span>3</span></div>
-    <div class="column-6"><span>6</span></div>
+    <nav class="navbar column-12">
+      <ul class=navbar-ul">
+        <li class="nav-item"><a href="/app/src">Home</a></li>
+        <li class="nav-item"><a href="/app/src/contact.html">Contact</a></li>
+        <li class="nav-item"><a href="/app/src/faq.html">FAQ</a></li>
+      </ul>
+    </nav>
   </div>
-  <div class="row">
-    <div class="column-1"><span>1</span></div>
-    <div class="column-1"><span>1</span></div>
-    <div class="column-1"><span>1</span></div>
-    <div class="column-1"><span>1</span></div>
-    <div class="column-8"><span>8</span></div>
+  <div class="column-2 sidebar">
   </div>
-  <div class="row">
-    <div class="column-9"><button><span>9</span></button></div>
-    <div class="column-3"><button><span>3</span></button></div>
-  </div>
-  <div class="row">
-    <div class="column-12"><button><span>12</span></button></div>
+  <div class="column-10 main">
   </div>
 </section>
 
 
 <!--build:js js/main.min.js -->
 <script src="global/script.js"></script>
-
 <!-- endbuild -->
 </body>
 </html>

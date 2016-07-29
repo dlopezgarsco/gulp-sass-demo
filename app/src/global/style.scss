@@ -4,10 +4,20 @@
 @import "variables";
 @import "mixins";
 
+
+
 *, *:after, *:before {
   margin: 0;
   padding: 0;
   @include border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Roboto', 'Arial';
 }
 
 img {
@@ -42,24 +52,38 @@ img {
       width: 100% / $grid-columns * $i;
     }
   }
-
-  span {
-    background: gold;
-    display: block;
-    padding: 1em 0;
-    text-align: center;
-  }
-
-  span {
-    &:hover {
-      @extend .column-4
-    }
-  }
-  button {
-    background: indianred;
-    font-size: 16px;
-    padding: 10px 30px 10px 30px;
-    display: block;
-  }
 }
 
+.navbar {
+  background: saddlebrown;
+  border-bottom: 2px solid $main-gray;
+}
+
+.nav-item {
+  float: left;
+  list-style: none;
+  color: $main-gray;
+  display: block;
+  position: relative;
+}
+
+.nav-item>a {
+  color: $main-gray;
+  //background: greenyellow;
+  padding: 1em;
+}
+
+.nav-item>a:hover, .nav-item>a:active  {
+  background: $main-gray;
+  color: saddlebrown;
+}
+
+.sidebar {
+  background: gold;
+  height: 600px;
+}
+
+.main {
+  background: indianred;
+  height: 600px;
+}

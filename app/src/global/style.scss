@@ -1,33 +1,29 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
 @import "variables";
-@import "mixins";
 @import "core";
-@import "media-queries";
 
 .navbar {
+  padding: 1em;
   background: $navbar;
-}
-
-.navbar > ul > li {
-  float: left;
-  color: $main-gray;
-
+  border-bottom: 2px solid $main-gray;
+  li {
+    display: inline;
+    color: $main-gray;
+  }
   a {
     color: $main-gray;
     padding: 1em;
   }
-
   a:hover,
   a:active {
     background: $main-gray;
-    color: $navbar !important;
+    color: $navbar;
   }
 }
 
 .main-content {
-  height: 10px;
+  height: auto;
   line-height: 0px;
-
   img {
     height: auto;
     z-index: -1;
@@ -59,12 +55,48 @@
 }
 
 .test {
-  .column-3 {
+  :nth-child(1) {
+    background: #c06000;
     padding: 1em;
-    background: chocolate;
   }
-  .column-9 {
+  :nth-child(2) {
+    background: pink;
     padding: 1em;
-    background: indianred;
+  }
+}
+
+@media #{$breakpoint-small} {
+  .navbar {
+    a {
+      width: 100%;
+      display: block;
+      padding: 1em;
+      text-align: center;
+    }
+  }
+  .wrapper {
+    height: 100%;
+    font-size: 20px;
+    width: 100%;
+    max-width: $grid-max-width;
+  }
+  @for $i from 1 through $grid-columns {
+    .col-s-#{$i} {
+      width: 100%;
+    }
+    .offcol-s-#{$i} {
+      margin-left: 0;
+    }
+  }
+}
+
+@media #{$breakpoint-large} {
+  @for $i from 1 through $grid-columns {
+    .column-#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+    .offcol-#{$i} {
+      margin-left: 100% / $grid-columns * $i;
+    }
   }
 }

@@ -1,7 +1,5 @@
-@import "variables";
-@import "media-queries";
 @import "mixins";
-
+@import "variables";
 
 *, *:after, *:before {
   margin: 0;
@@ -13,22 +11,6 @@ img {
   width: auto;
   max-width: 100%;
   height: auto !important;
-}
-
-.wrapper {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.wrapper, .row {
-  @extend %clearfix;
-}
-
-[class*='column-'] {
-  float: left;
-  padding: 1em;
-  width: 100%;
-  min-height: 1px;
 }
 
 a {
@@ -43,4 +25,25 @@ body {
   font-family: 'Roboto', 'Arial';
   font-size: 16px;
   background: $main-gray;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper, .row {
+  @extend %clearfix;
+}
+
+[class*='column-'] {
+  float: left;
+  width: 100%;
+  min-height: 1px;
+}
+
+.wrapper {
+  font-size: 16px;
+  width: 100%;
+  max-width: $grid-max-width;
 }

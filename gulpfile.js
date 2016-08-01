@@ -38,7 +38,6 @@ gulp.task('watch', ['browserSync', 'sass'], function () {
     gulp.watch('app/src/**/*.js', browserSync.reload);
 });
 
-
 gulp.task('build', function (callback) {
     runSequence('clean:dist',
         ['sass', 'useref', 'images', 'fonts'],
@@ -66,8 +65,13 @@ gulp.task('sass', function () {
 gulp.task('browserSync', function () {
     browserSync.init({
         server: {
-            baseDir: './'
-        }
+            baseDir: 'app/src/',
+            routes: {
+                '/node_modules': 'node_modules'
+            }
+        },
+        port: '8080',
+        open: false,
     })
 });
 

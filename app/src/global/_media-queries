@@ -1,0 +1,33 @@
+@import "variables";
+
+@media #{$breakpoint-small} {
+  .wrapper {
+    font-size: 12px;
+    width: 100%;
+    max-width: $grid-max-width;
+  }
+  @for $i from 1 through $grid-columns {
+    .col-s-#{$i} {
+      width: 100%;
+    }
+    .offcol-s-#{$i} {
+      margin-left: 0;
+    }
+  }
+}
+
+@media #{$breakpoint-large} {
+  .wrapper {
+    font-size: 12px;
+    width: 100%;
+    max-width: $grid-max-width;
+  }
+  @for $i from 1 through $grid-columns {
+    .col-#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+    .offcol-#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+}

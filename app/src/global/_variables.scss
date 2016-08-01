@@ -3,11 +3,11 @@ $grid-columns: 12;
 $grid-max-width: 65em;
 
 // breakpoints
-$breakpoint-small: "only screen and (min-width: 20em)";
-$breakpoint-medium: "only screen and (min-width: 600px)";
-
-$height: 600px;
+$breakpoint-portrait: "only screen and (max-width: 767px) and (orientation: portrait)";
+$breakpoint-small: "only screen and (max-width: 767px)";
+$breakpoint-large: "only screen and (min-width: 768px)";
 
 // colors
 
 $main-gray: #eee;
+$navbar: #9933cc;

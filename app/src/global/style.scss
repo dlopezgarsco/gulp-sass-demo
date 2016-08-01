@@ -1,70 +1,15 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
 @import "variables";
 @import "mixins";
-@import "variables";
-@import "mixins";
-
-*, *:after, *:before {
-  margin: 0;
-  padding: 0;
-  @include border-box;
-}
-
-a {
-  text-decoration: none;
-}
-
-body {
-  font-family: 'Roboto', 'Arial';
-  background: $main-gray;
-}
-
-img {
-  width: auto;
-  max-width: 100%;
-  height: auto !important;
-}
-
-.wrapper {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.wrapper, .row {
-  @extend %clearfix;
-}
-
-[class*='column-'] {
-  float: left;
-  padding: 1em;
-  width: 100%;
-  min-height: 1px;
-}
-
-@media #{$breakpoint-medium} {
-  .wrapper {
-    width: 95%;
-    max-width: $grid-max-width;
-  }
-  @for $i from 1 through $grid-columns {
-    .column-#{$i} {
-      width: 100% / $grid-columns * $i;
-    }
-    .off-column-#{$i} {
-      margin-left: 100% / $grid-columns * $i;
-    }
-  }
-}
+@import "core";
+@import "media-queries";
 
 .navbar {
-  background: #2e2e2e;
-  border-bottom: 2px solid #eeefef;
-  display: block;
+  background: $navbar;
 }
 
 .navbar > ul > li {
   float: left;
-  list-style: none;
   color: $main-gray;
 
   a {
@@ -75,30 +20,36 @@ img {
   a:hover,
   a:active {
     background: $main-gray;
-    color: saddlebrown !important;
+    color: $navbar !important;
   }
 }
 
 .main-content {
+  height: 10px;
+  line-height: 0px;
+
   img {
-    position: inherit;
-    z-index: 0;
+    height: auto;
+    z-index: -1;
+    opacity: 0.4;
   }
   h1 {
     position: absolute;
-    z-index: 1;
+    left: 0;
+    top: 50%;
+    width: 100%;
     text-align: center;
   }
-  h1:hover {
+  span:hover {
     color: #fff;
   }
 }
 
 .footer {
+  width: 100%;
   border-top: 2px solid indianred;
   background-color: gray;
   border-top: 3px solid #2e2e2e;
-  height: 60px;
   span {
     font-size: 14px;
     float: left;
@@ -107,6 +58,13 @@ img {
   }
 }
 
-#poio-test {
-  background: pink;
+.test {
+  .column-3 {
+    padding: 1em;
+    background: chocolate;
+  }
+  .column-9 {
+    padding: 1em;
+    background: indianred;
+  }
 }

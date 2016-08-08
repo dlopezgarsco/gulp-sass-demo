@@ -2,6 +2,7 @@
 @import "variables";
 @import "core";
 
+
 .navbar {
   padding: 1em;
   background: $navbar;
@@ -30,11 +31,10 @@
     opacity: 0.4;
   }
   h1 {
-    position: absolute;
-    left: 0;
+    position: fixed;
     top: 50%;
-    width: 100%;
-    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   span:hover {
     color: #fff;
@@ -99,4 +99,8 @@
       margin-left: 100% / $grid-columns * $i;
     }
   }
+}
+
+html, body {
+  height: 100%;
 }

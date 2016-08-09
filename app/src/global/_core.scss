@@ -1,5 +1,6 @@
 @import "mixins";
 @import "variables";
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
 
 *, *:after, *:before {
   margin: 0;
@@ -23,7 +24,6 @@ li {
 body {
   font-family: 'Roboto', 'Arial';
   font-size: 16px;
-  background: $main-gray;
 }
 
 textarea,
@@ -50,4 +50,26 @@ input:focus {
   font-size: 16px;
   width: 100%;
   max-width: $grid-max-width;
+}
+
+@media #{$breakpoint-small} {
+  @for $i from 1 through $grid-columns {
+    .col-s-#{$i} {
+      width: 100%;
+    }
+    .offcol-s-#{$i} {
+      margin-left: 0;
+    }
+  }
+}
+
+@media #{$breakpoint-large} {
+  @for $i from 1 through $grid-columns {
+    .column-#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+    .offcol-#{$i} {
+      margin-left: 100% / $grid-columns * $i;
+    }
+  }
 }

@@ -1,0 +1,95 @@
+@import "global/variables";
+@import "global/core";
+
+html, body {
+  margin: 0 auto;
+  padding: 0;
+  animation-name: zoomIn;
+  animation-duration: 1s;
+}
+
+.header {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.content {
+  width: 60%;
+  margin: 0 auto;
+  background: #eee;
+  padding: 2em 2em;
+  border-radius: 0.5em;
+  h2 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.login {
+  margin: 0 auto;
+  width: 90%;
+  padding: 1em;
+  line-height: 2em;
+
+  input {
+    width: 100%;
+    margin: 0.5em 0 0.5em 0;
+    padding: 0.5em 0 0.5em 0;
+    background: none;
+    border: none;
+    border-bottom: 3px solid #000;
+  }
+
+  input:focus {
+    border-bottom-color: $navbar;
+  }
+
+  .btn {
+    background: #D9853B;
+    color: #000;
+  }
+  .btn:hover {
+    background: darken(#D9853B, 5%);
+  }
+
+  h4 {
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+  }
+  .socialmedia {
+    margin: 0 auto;
+    width: 30%;
+    i {
+      width: 30%;
+      text-align: center;
+    }
+    i:hover {
+      animation: flash 2s forwards;
+    }
+    a {
+      color: $navbar;
+    }
+  }
+}
+
+@media #{$breakpoint-small} {
+  .navbar {
+    a {
+      width: 100%;
+      display: block;
+      padding: 1em;
+      text-align: center;
+    }
+  }
+  .wrapper {
+    height: 100%;
+    font-size: 20px;
+    width: 100%;
+    max-width: $grid-max-width;
+  }
+  .socialmedia {
+    width: 100% !important;
+  }
+}

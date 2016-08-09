@@ -24,3 +24,14 @@
     $h1size: $h1size - $minus;
   }
 }
+
+
+@keyframes fadeBorder {
+  $division: 10;
+  @for $i from 1 through $division {
+    #{(100/$division) * $i}% {
+      border-left: 2px * $i solid #ff2f54;
+    }
+  }
+}
+

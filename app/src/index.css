@@ -168,75 +168,71 @@ input:focus {
   .offcol-12 {
     margin-left: 100%; } }
 
-body {
-  background: #9933cc; }
+html, body {
+  margin: 0 auto;
+  padding: 0;
+  animation-name: zoomIn;
+  animation-duration: 1s; }
 
-.btn {
-  display: inline-block;
-  width: 100%;
+.header {
   text-align: center;
-  padding: 0.5em 0;
-  margin-top: 1em;
-  border: 1px solid transparent;
-  border-radius: 0.2em;
-  font-weight: 500;
-  cursor: pointer; }
+  color: #fff;
+  text-transform: uppercase; }
 
-.wrapper, .row {
-  *zoom: 1; }
-  .wrapper:before, .row:before, .wrapper:after, .row:after {
-    content: " ";
-    display: table; }
-  .wrapper:after, .row:after {
-    clear: both; }
+.content {
+  width: 60%;
+  margin: 0 auto;
+  background: #eee;
+  padding: 2em 2em;
+  border-radius: 0.5em; }
+  .content h2 {
+    width: 100%;
+    text-align: center; }
 
-@keyframes fadeBorder {
-  10% {
-    border-left: 2px solid #ff2f54; }
-  20% {
-    border-left: 4px solid #ff2f54; }
-  30% {
-    border-left: 6px solid #ff2f54; }
-  40% {
-    border-left: 8px solid #ff2f54; }
-  50% {
-    border-left: 10px solid #ff2f54; }
-  60% {
-    border-left: 12px solid #ff2f54; }
-  70% {
-    border-left: 14px solid #ff2f54; }
-  80% {
-    border-left: 16px solid #ff2f54; }
-  90% {
-    border-left: 18px solid #ff2f54; }
-  100% {
-    border-left: 20px solid #ff2f54; } }
+.login {
+  margin: 0 auto;
+  width: 90%;
+  padding: 1em;
+  line-height: 2em; }
+  .login input {
+    width: 100%;
+    margin: 0.5em 0 0.5em 0;
+    padding: 0.5em 0 0.5em 0;
+    background: none;
+    border: none;
+    border-bottom: 3px solid #000; }
+  .login input:focus {
+    border-bottom-color: #9933cc; }
+  .login .btn {
+    background: #D9853B;
+    color: #000; }
+  .login .btn:hover {
+    background: #d27829; }
+  .login h4 {
+    padding: 1em;
+    width: 100%;
+    text-align: center; }
+  .login .socialmedia {
+    margin: 0 auto;
+    width: 30%; }
+    .login .socialmedia i {
+      width: 30%;
+      text-align: center; }
+    .login .socialmedia i:hover {
+      animation: flash 2s forwards; }
+    .login .socialmedia a {
+      color: #9933cc; }
 
 @media only screen and (max-width: 767px) {
-  h1 {
-    font-size: 1.5em; }
-  h2 {
-    font-size: 1.3em; }
-  h3 {
-    font-size: 1.1em; }
-  h4 {
-    font-size: 0.9em; }
-  h5 {
-    font-size: 0.7em; }
-  h6 {
-    font-size: 0.5em; }
-  font-size: 0.8em; }
-
-@media only screen and (min-width: 768px) {
-  h1 {
-    font-size: 3em; }
-  h2 {
-    font-size: 2.5em; }
-  h3 {
-    font-size: 2em; }
-  h4 {
-    font-size: 1.5em; }
-  h5 {
-    font-size: 1em; }
-  h6 {
-    font-size: 0.5em; } }
+  .navbar a {
+    width: 100%;
+    display: block;
+    padding: 1em;
+    text-align: center; }
+  .wrapper {
+    height: 100%;
+    font-size: 20px;
+    width: 100%;
+    max-width: 65em; }
+  .socialmedia {
+    width: 100% !important; } }

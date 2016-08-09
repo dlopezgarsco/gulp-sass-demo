@@ -26,6 +26,11 @@ body {
   background: $main-gray;
 }
 
+textarea,
+input:focus {
+  outline: none;
+}
+
 .wrapper {
   width: 100%;
   margin: 0 auto;

@@ -1,0 +1,11 @@
+@import "variables";
+@import "mixins";
+
+@media #{$breakpoint-small} {
+  @include headings(1.5em, 0.2em);
+  font-size: 0.8em;
+}
+
+@media #{$breakpoint-large} {
+  @include headings(3em, 0.5em);
+}

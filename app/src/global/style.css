@@ -29,6 +29,10 @@ body {
   font-size: 16px;
   background: #eee; }
 
+textarea,
+input:focus {
+  outline: none; }
+
 .wrapper {
   width: 100%;
   margin: 0 auto; }
@@ -43,54 +47,101 @@ body {
   width: 100%;
   max-width: 65em; }
 
-.navbar {
-  padding: 1em;
+html, body {
   background: #9933cc;
-  border-bottom: 2px solid #eee; }
-  .navbar li {
-    display: inline;
-    color: #eee; }
-  .navbar a {
-    color: #eee;
-    padding: 1em; }
-  .navbar a:hover,
-  .navbar a:active {
-    background: #eee;
-    color: #9933cc; }
+  margin: 0 auto;
+  padding: 0; }
 
-.main-content {
-  height: auto;
-  line-height: 0px; }
-  .main-content img {
-    height: auto;
-    z-index: -1;
-    opacity: 0.4; }
-  .main-content h1 {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-  .main-content span:hover {
-    color: #fff; }
+.header {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase; }
 
-.footer {
-  width: 100%;
-  border-top: 2px solid indianred;
-  background-color: gray;
-  border-top: 3px solid #2e2e2e; }
-  .footer span {
-    font-size: 14px;
-    float: left;
-    margin: 1em;
-    color: #2e2e2e; }
+.content {
+  width: 60%;
+  margin: 0 auto;
+  background: #eee;
+  padding: 2em 2em;
+  border-radius: 0.5em; }
+  .content h2 {
+    width: 100%;
+    text-align: center; }
 
-.test :nth-child(1) {
-  background: #c06000;
-  padding: 1em; }
+.login {
+  margin: 0 auto;
+  width: 90%;
+  padding: 1em;
+  line-height: 2em; }
+  .login input {
+    width: 100%;
+    margin: 0.5em 0 0.5em 0;
+    padding: 0.5em 0 0.5em 0;
+    background: none;
+    border: none;
+    border-bottom: 3px solid #000; }
+  .login input:focus {
+    border-bottom-color: #9933cc; }
+  .login button {
+    width: 100%;
+    padding: 0.5em 0;
+    margin-top: 1em;
+    background: #D9853B;
+    border: 1px solid transparent;
+    border-radius: 0.2em;
+    color: #000;
+    font-weight: 500;
+    cursor: pointer; }
+  .login button:hover {
+    background: #d27829; }
+  .login h4 {
+    padding: 1em;
+    width: 100%;
+    text-align: center; }
+  .login .socialmedia {
+    margin: 0 auto;
+    width: 30%; }
+    .login .socialmedia i {
+      width: 30%;
+      text-align: center; }
+    .login .socialmedia a {
+      color: #9933cc; }
 
-.test :nth-child(2) {
-  background: pink;
-  padding: 1em; }
+.wrapper, .row {
+  *zoom: 1; }
+  .wrapper:before, .row:before, .wrapper:after, .row:after {
+    content: " ";
+    display: table; }
+  .wrapper:after, .row:after {
+    clear: both; }
+
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 1.5em; }
+  h2 {
+    font-size: 1.3em; }
+  h3 {
+    font-size: 1.1em; }
+  h4 {
+    font-size: 0.9em; }
+  h5 {
+    font-size: 0.7em; }
+  h6 {
+    font-size: 0.5em; }
+  font-size: 0.8em; }
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 3em; }
+  h2 {
+    font-size: 2.5em; }
+  h3 {
+    font-size: 2em; }
+  h4 {
+    font-size: 1.5em; }
+  h5 {
+    font-size: 1em; }
+  h6 {
+    font-size: 0.5em; } }
 
 @media only screen and (max-width: 767px) {
   .navbar a {
@@ -103,6 +154,8 @@ body {
     font-size: 20px;
     width: 100%;
     max-width: 65em; }
+  .socialmedia {
+    width: 100% !important; }
   .col-s-1 {
     width: 100%; }
   .offcol-s-1 {
@@ -201,6 +254,3 @@ body {
     width: 100%; }
   .offcol-12 {
     margin-left: 100%; } }
-
-html, body {
-  height: 100%; }

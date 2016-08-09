@@ -2,34 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>gulp-sass-demo</title>
   <!--build:css css/styles.min.css-->
   <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css">
   <link rel="stylesheet" href="global/style.css">
+  <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
   <!--endbuild-->
 </head>
 <body>
 
 <section class="wrapper">
-  <div class="row">
-    <nav class="navbar column-12">
-      <ul>
-        <li><a>Home</a></li>
-        <li><a>Contact</a></li>
-        <li><a>FAQ</a></li>
-      </ul>
-    </nav>
-  </div>
-
-  <div class="row main-content">
-    <div class="column-12">
-      <img src="global/resources/imgs/eos-freya.jpg" alt="background"/>
-      <h1><span>Some text</span></h1>
-    </div>
-  </div>
-  <div class="row footer">
-    <div class="column-12">
-      <span>All Copyrights Reserved</span>
+  <h1 class="header">Poioflow</h1>
+  <div class="content">
+    <div class="login">
+      <h2>Login</h2>
+      <form action="">
+        <input type="text" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <h4><a href="">Forgot your password?</a></h4>
+        <div class="socialmedia">
+          <a href="http://twitter.com">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="http://facebook.com">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="http://instagram.com">
+            <i class="fa fa-instagram"></i>
+          </a>
+        </div>
     </div>
   </div>
 </section>

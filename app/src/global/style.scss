@@ -2,68 +2,80 @@
 @import "variables";
 @import "core";
 
-
-.navbar {
-  padding: 1em;
+html, body {
   background: $navbar;
-  border-bottom: 2px solid $main-gray;
-  li {
-    display: inline;
-    color: $main-gray;
-  }
-  a {
-    color: $main-gray;
-    padding: 1em;
-  }
-  a:hover,
-  a:active {
-    background: $main-gray;
-    color: $navbar;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.content {
+  width: 60%;
+  margin: 0 auto;
+  background: #eee;
+  padding: 2em 2em;
+  border-radius: 0.5em;
+  h2 {
+    width: 100%;
+    text-align: center;
   }
 }
 
-.main-content {
-  height: auto;
-  line-height: 0px;
-  img {
-    height: auto;
-    z-index: -1;
-    opacity: 0.4;
-  }
-  h1 {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  span:hover {
-    color: #fff;
-  }
-}
+.login {
+  margin: 0 auto;
+  width: 90%;
+  padding: 1em;
+  line-height: 2em;
 
-.footer {
-  width: 100%;
-  border-top: 2px solid indianred;
-  background-color: gray;
-  border-top: 3px solid #2e2e2e;
-  span {
-    font-size: 14px;
-    float: left;
-    margin: 1em;
-    color: #2e2e2e;
+  input {
+    width: 100%;
+    margin: 0.5em 0 0.5em 0;
+    padding: 0.5em 0 0.5em 0;
+    background: none;
+    border: none;
+    border-bottom: 3px solid #000;
   }
-}
+  input:focus {
+    border-bottom-color: $navbar;
+  }
 
-.test {
-  :nth-child(1) {
-    background: #c06000;
-    padding: 1em;
+  button {
+    width: 100%;
+    padding: 0.5em 0;
+    margin-top: 1em;
+    background: #D9853B;
+    border: 1px solid transparent;
+    border-radius: 0.2em;
+    color: #000;
+    font-weight: 500;
+    cursor: pointer;
   }
-  :nth-child(2) {
-    background: pink;
+  button:hover {
+    background: darken(#D9853B, 5%);
+  }
+  h4 {
     padding: 1em;
+    width: 100%;
+    text-align: center;
+  }
+  .socialmedia {
+    margin: 0 auto;
+    width: 30%;
+    i {
+      width: 30%;
+      text-align: center;
+    }
+    a {
+      color: $navbar;
+    }
   }
 }
+@import "breakpoints";
 
 @media #{$breakpoint-small} {
   .navbar {
@@ -79,6 +91,12 @@
     font-size: 20px;
     width: 100%;
     max-width: $grid-max-width;
+  }
+  .socialmedia {
+    width: 100% !important;
+    //i {
+    //  width: 100%;
+    //}
   }
   @for $i from 1 through $grid-columns {
     .col-s-#{$i} {
@@ -99,8 +117,4 @@
       margin-left: 100% / $grid-columns * $i;
     }
   }
-}
-
-html, body {
-  height: 100%;
 }

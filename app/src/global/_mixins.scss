@@ -15,3 +15,12 @@
     clear: both;
   }
 }
+
+@mixin headings($h1size, $minus){
+  @each $h in h1, h2, h3, h4, h5, h6 {
+    #{$h} {
+      font-size: $h1size;
+    }
+    $h1size: $h1size - $minus;
+  }
+}

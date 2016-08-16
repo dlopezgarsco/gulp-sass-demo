@@ -1,0 +1,33 @@
+@import "../global/variables";
+@import "../global/core";
+
+.navbar {
+  background: $navbar;
+  padding: 1em;
+  overflow: auto;
+  ul li {
+    float: left;
+  }
+  .navbar-right {
+    float: right;
+    li {
+      display: inline-block;
+    }
+  }
+  a {
+    color: #fff;
+    padding: 1em;
+  }
+  a:hover {
+    background: darken($navbar, 5%);
+  }
+}
+
+.content {
+  background: $main-gray;
+  padding: 1em;
+  h1 {
+    width: 100%;
+    text-align: center;
+  }
+}

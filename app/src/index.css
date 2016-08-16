@@ -202,7 +202,7 @@ html, body {
     border: none;
     border-bottom: 3px solid #000; }
   .login input:focus {
-    border-bottom-color: #9933cc; }
+    border-bottom-color: brown; }
   .login .btn {
     background: #D9853B;
     color: #000; }
@@ -221,7 +221,7 @@ html, body {
     .login .socialmedia i:hover {
       animation: flash 2s forwards; }
     .login .socialmedia a {
-      color: #9933cc; }
+      color: brown; }
 
 @media only screen and (max-width: 767px) {
   .navbar a {
